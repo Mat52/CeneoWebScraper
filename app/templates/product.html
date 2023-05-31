@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .columns {
+            display: inline-block;
+        }
+
+        .row {
+            margin-top: 2%;
+        }
+
+        ul {
+
+            text-align: left;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="extraction">Ekstrakcja opinii</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productlist">Lista produktów</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="author">O autorze</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <table id="example" class="table table-striped table-light">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id opinii</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Rekomendacja</th>
+                <th scope="col">Czy potwierdzone zakupem</th>
+                <th scope="col">Data opinii</th>
+                <th scope="col">Data zakupu</th>
+                <th scope="col">Przydatne</th>
+                <th scope="col">Nieprzydatne</th>
+                <th scope="col">Zawartość</th>
+                <th scope="col">Minusy</th>
+                <th scope="col">Plusy</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>17227237</td>
+                <td>p...n</td>
+                <td>null</td>
+                <td>3,5/5</td>
+                <td>Opinia potwierdzona zakupem</td>
+                <td>2023-03-06 10:06:48</td>
+                <td>2023-02-11 18:18:54</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Jak za zegarek za tą cenę można było spodziewać się czegoś więcej.\nPierwsze dni noszenia to
+                    ciągłe rozciąganie się gumowego paska (z początku ciasno było na 8 dziurce, po dwóch tyg. już
+                    jest na 10)\nJeśli chodzi o działanie to też nie jest wyśmienicie: \n- szybkość reakcji po
+                    naciśnięciu przycisku na wejście np. w menu aktywności pozostawia wiele do życzenia\n- ślad GPS
+                    to porażka, rozrzut ścieżki do kilkudziesięciu metrów\n- ładowanie przy ciągłym noszeniu (w tym
+                    codzienne aktywności) z włączonym GPS co jakieś 3-4 dni \nNa plus: \n- dużo różnych tarcz do
+                    wyboru\n- płatności\n\nGdyby nie promocyjna cena (1699zl) obejrzałbym się za czymś innym</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>17181081</td>
+                <td>m...7</td>
+                <td>Polecam</td>
+                <td>5/5</td>
+                <td>Opinia potwierdzona zakupem</td>
+                <td>2023-02-23 07:27:30</td>
+                <td>2023-02-11 07:05:58</td>
+                <td>0</td>
+                <td>0</td>
+                <td>Moja druga szóstka wcześniej to był Feniks 6 pro teraz Fenix 6 pro solar dla mnie zegarek
+                    rewelacyjny polecam.</td>
+                <td></td>
+                <td>"czas pracy na baterii",
+                    "funkcjonalność",
+                    "sterowanie muzyką",
+                    "wyświetlacz"</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <button>Pobierz plik .json</button>
+    <button onclick="window.location='chart'">Przejdz do strony z wykresami</button>
+
+
+
+
+
+
+    <div class="text-center p-4 fixed-bottom" style="background-color: dark">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold">Mateusz Łopatkiewicz</a>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+
+
+</body>
+
+</html>
